@@ -74,9 +74,9 @@ from sklearn.metrics import make_scorer
 import preprocessing as PRE
 ```
 
-    /Users/mahn/anaconda3/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+    /Users/SamTimura/anaconda3/lib/python3.6/site-packages/sklearn/cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
       "This module will be removed in 0.20.", DeprecationWarning)
-    /Users/mahn/anaconda3/lib/python3.6/site-packages/sklearn/grid_search.py:42: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. This module will be removed in 0.20.
+    /Users/SamTimura/anaconda3/lib/python3.6/site-packages/sklearn/grid_search.py:42: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. This module will be removed in 0.20.
       DeprecationWarning)
 
 
@@ -116,14 +116,15 @@ df_raw['SalePrice'].describe() # looks good: we see no $0 houses, or accidental 
 dist = sns.distplot(df_raw['SalePrice'])
 plt.figure()
 prob = stats.probplot(df_raw['SalePrice'], plot=plt)
+plt.show('data_science_project_1/HouseRegression_Images/output_13_0.png')
 ```
 
 
-![png](HouseRegression_Images/output_13_0.png)
+![png](output_13_0.png)
 
 
 
-![png](HouseRegression_Images/output_13_1.png)
+![png](output_13_1.png)
 
 
 A problem however, is in the distribution. It has a clear right skew and shows peakedness, which can be represented numerically with Skewness and Kurtosis statistics. It is pretty clear visually too, and a simple solution involves applying a log transformation.  
