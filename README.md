@@ -138,11 +138,11 @@ prob = stats.probplot(df_full['SalePrice'], plot=plt)
 ```
 
 
-![png](output_15_0.png)
+![png](HouseRegression_Images/output_15_0.png)
 
 
 
-![png](output_15_1.png)
+![png](HouseRegression_Images/output_15_1.png)
 
 
 A probability plot is a simple way of determining whether data follows a specified distribution. The closer the blue dots follow the red line, the closer the data is to representing that distribution. The stats library defaults to 'normal' for the probplot function, but we can make a probplot for other distributions, too.
@@ -158,7 +158,7 @@ plt.show()
 ```
 
 
-![png](output_19_0.png)
+![png](HouseRegression_Images/output_19_0.png)
 
 
 
@@ -193,7 +193,7 @@ plt.show()
 ```
 
 
-![png](output_23_0.png)
+![png](HouseRegression_Images/output_23_0.png)
 
 
 We can see a fairly clear cutoff where some features are missing a few observations vs a lot of observations. An arbitrary threshold is at 10%, though it seems like it could have been anywhere from about 7-18% based on eye judgment. 
@@ -372,7 +372,7 @@ plt.show()
 ```
 
 
-![png](output_38_0.png)
+![png](HouseRegression_Images/output_38_0.png)
 
 
 Correlation coefficients are normalized [-1, 1] scale representations of the mutual tendency of two variables. While there are many formulas to calculate correlation, two popular ones are Pearson Correlation Coefficient and Kendall Rank Correlation.  
@@ -419,7 +419,7 @@ corr_scores
 ```
 
 
-![png](output_41_0.png)
+![png](HouseRegression_Images/output_41_0.png)
 
 
 
@@ -662,7 +662,7 @@ plt.tight_layout()
 ```
 
 
-![png](output_60_0.png)
+![png](HouseRegression_Images/output_60_0.png)
 
 
 It looks like we have 3 pairs of features that are highly correlated. A crossroads for us was in deciding whether to simply treat 'TotRmsAbvGrd' and 'GarageCars' as categorical variables, or continue with our feature engineering as numerical. We chose to keep them as numerical since it seemed easier to deal with.
@@ -736,7 +736,7 @@ plt.tight_layout()
 ```
 
 
-![png](output_69_0.png)
+![png](HouseRegression_Images/output_69_0.png)
 
 
 Another easy way to determine whether we want to choose which variables should be categorical is to look at the number of unique value_counts(). 
@@ -802,7 +802,7 @@ plt.show()
 ```
 
 
-![png](output_79_0.png)
+![png](HouseRegression_Images/output_79_0.png)
 
 
 Pandas' get_dummies() function splits a categorical feature by every unique value it contains. Each value gets its own columns, becoming a new binary feature (0 or 1). This is a common and easy way to plug categorical values into a sklearn algorithm.
@@ -1050,7 +1050,7 @@ plt.show()
 ```
 
 
-![png](output_113_0.png)
+![png](HouseRegression_Images/output_113_0.png)
 
 
 
@@ -1060,7 +1060,7 @@ plt.show()
 ```
 
 
-![png](output_114_0.png)
+![png](HouseRegression_Images/output_114_0.png)
 
 
 The model assumptions of normal residuals seems good. There does appear to be a slight left skew, but considering we are only predicting on a few hundred observations, this should not be too big of a deal.  
